@@ -13,7 +13,7 @@
         </div>
         <div class="links">
             <div class="link-box" onclick="showDropdown('dropdown1')">
-                <a>Server Link 1</a>
+                <a href="#" target="_blank">Server Link 1</a>
                 <p>Current Status: <span class="status offline">Offline</span></p>
                 <p>Password: <span class="password-no">N/A</span></p>
                 <div class="dropdown" id="dropdown1">
@@ -23,16 +23,23 @@
                 </div>
             </div>
             <p></p>
-
             <div class="link-box" onclick="showDropdown('dropdown2')">
-                <a>Server Link 2</a>
+                <a href="#" target="_blank">Server Link 2</a>
                 <p>Current Status: <span class="status">Online</span></p>
                 <p>Password: <span class="password-yes">73.137.120.124</span></p>
                 <div class="dropdown" id="dropdown2">
+                    
                     <p>Do you want to proceed to this link?</p>
                     <button onclick="window.open('https://rare-parrots-jam.loca.lt/', '_blank')">Proceed</button>
                     <button onclick="copyPassword('73.137.120.124')">Copy Password</button>
                 </div>
+            </div>
+        </div>
+        <div class="report-outage">
+            <button onclick="showReportDropdown()">Report an Outage</button>
+            <div class="report-dropdown" id="reportDropdown">
+                <p>Email: computerwiz541@gmail.com</p>
+                <p>Phone: +1-470-772-5225</p>
             </div>
         </div>
     </div>
@@ -49,9 +56,19 @@
                 alert('Password copied to clipboard');
             });
         }
+
+        function showReportDropdown() {
+            var dropdown = document.getElementById('reportDropdown');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        }
     </script>
 </body>
 </html>
+
 
 
 
