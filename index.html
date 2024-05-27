@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jellyfin Server Links</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Watch Jellyfin Server Links</h1>
+        </div>
+        <div class="links">
+            <div class="link-box" onclick="showDropdown('dropdown1')">
+                <a>Server Link 1</a>
+                <p>Current Status: <span class="status offline">Offline</span></p>
+                <p>Password: <span class="password-no">N/A</span></p>
+                <div class="dropdown" id="dropdown1">
+                    <p>Do you want to proceed to this link?</p>
+                    <button onclick="window.open('https://dbd7-2601-ca-8500-2130-2d77-de17-3c66-c5e0.ngrok-free.app/', '_blank')">Proceed</button>
+                    <button onclick="copyPassword('N/A')">Copy Password</button>
+                </div>
+            </div>
+            <p></p>
+
+            <div class="link-box" onclick="showDropdown('dropdown2')">
+                <a>Server Link 2</a>
+                <p>Current Status: <span class="status">Online</span></p>
+                <p>Password: <span class="password-yes">73.137.120.124</span></p>
+                <div class="dropdown" id="dropdown2">
+                    <p>Do you want to proceed to this link?</p>
+                    <button onclick="window.open('https://rare-parrots-jam.loca.lt/', '_blank')">Proceed</button>
+                    <button onclick="copyPassword('73.137.120.124')">Copy Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showDropdown(id) {
+            document.querySelectorAll('.dropdown').forEach(dropdown => {
+                dropdown.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function copyPassword(password) {
+            navigator.clipboard.writeText(password).then(() => {
+                alert('Password copied to clipboard');
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- 
+    ONE OFFLINE
+    <div class="link-box">
+    <a href="https://dbd7-2601-ca-8500-2130-2d77-de17-3c66-c5e0.ngrok-free.app/" target="_blank">Server Link 1</a>
+    <p>Current Status: <span class="status" id="status1">Online</span></p>
+</div>
+<div class="link-box">
+    <a href="https://silver-rooms-follow.loca.lt/" target="_blank">Server Link 2</a>
+    <p>Current Status: <span class="status offline" id="status2">Offline</span></p>
+</div>
+
+-->
