@@ -11,6 +11,19 @@
         <div class="header">
             <h1>Watch Jellyfin Server Links</h1>
         </div>
+        <div class="link-box" onclick="showDropdown('dropdown2')">
+                <a>Server Link 2</a>
+                <p>Current Status: <span class="status">Online</span></p>
+                <p>Password: <span class="password-no">N/A</span></p>
+                <div class="dropdown" id="dropdown2">
+                    
+                    <p>Do you want to proceed to this link?</p>
+                    <button onclick="window.open('https://five-rules-matter.loca.lt/', '_blank')">Proceed</button>
+                    <button onclick="copyPassword('73.137.120.124')">Copy Password</button>
+                </div>
+            </div>
+        </div>
+        <p></p>
         <div class="links">
             <div class="link-box" onclick="showDropdown('dropdown1')">
                 <a>Server Link 1</a>
@@ -22,19 +35,8 @@
                     <button onclick="copyPassword('N/A')">Copy Password</button>
                 </div>
             </div>
-            <p></p>
-            <div class="link-box" onclick="showDropdown('dropdown2')">
-                <a>Server Link 2</a>
-                <p>Current Status: <span class="status">Online</span></p>
-                <p>Password: <span class="password-yes">73.137.120.124</span></p>
-                <div class="dropdown" id="dropdown2">
-                    
-                    <p>Do you want to proceed to this link?</p>
-                    <button onclick="window.open('https://five-rules-matter.loca.lt/', '_blank')">Proceed</button>
-                    <button onclick="copyPassword('73.137.120.124')">Copy Password</button>
-                </div>
-            </div>
-        </div>
+            
+            
         <div class="report-outage">
             <button onclick="showReportDropdown()">Report an Outage</button>
             <div class="report-dropdown" id="reportDropdown">
