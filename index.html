@@ -11,7 +11,9 @@
         <div class="header">
             <h1>Watch Jellyfin Server Links</h1>
         </div>
-        <div class="link-box" onclick="showDropdown('dropdown2')">
+        
+        <div class="links">
+            <div class="link-box" onclick="showDropdown('dropdown2')">
                 <a>Server Link 2</a>
                 <p>Current Status: <span class="status">Online</span></p>
                 <p>Password: <span class="password-no">N/A</span></p>
@@ -22,9 +24,8 @@
                     <button onclick="copyPassword('73.137.120.124')">Copy Password</button>
                 </div>
             </div>
-        </div>
-        <p></p>
-        <div class="links">
+        
+            <p></p>
             <div class="link-box" onclick="showDropdown('dropdown1')">
                 <a>Server Link 1</a>
                 <p>Current Status: <span class="status offline">Offline</span></p>
@@ -36,7 +37,7 @@
                 </div>
             </div>
             
-            
+        </div>
         <div class="report-outage">
             <button onclick="showReportDropdown()">Report an Outage</button>
             <div class="report-dropdown" id="reportDropdown">
